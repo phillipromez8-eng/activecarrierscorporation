@@ -1,0 +1,195 @@
+@media (max-width: 1100px) {
+  .hero__inner,
+  .page-hero__inner,
+  .intro-grid,
+  .feature-layout,
+  .two-column,
+  .contact-grid,
+  .footer__grid,
+  .lane-tools__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-grid,
+  .lane-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero__media {
+    min-height: auto;
+  }
+
+  .hero__image {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 900px) {
+  .header__inner {
+    flex-wrap: wrap;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .nav {
+    width: 100%;
+    order: 3;
+    margin-left: 0;
+    display: none;
+  }
+
+  .nav.is-open {
+    display: block;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 0 1rem;
+  }
+
+  .nav__link {
+    justify-content: flex-start;
+    padding: 0.9rem 1rem;
+  }
+
+  .nav__cta-wrap {
+    padding-top: 0.2rem;
+  }
+
+  .hero {
+    padding-top: 3.4rem;
+  }
+
+  .hero__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .section,
+  .page-hero {
+    padding-top: 3.4rem;
+  }
+
+  .cta-block {
+    padding: 2rem;
+  }
+
+  .form-grid,
+  .section__subgrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    width: min(calc(100% - 1.1rem), var(--container));
+  }
+
+  .hero__title,
+  .section__title,
+  .page-hero__title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .hero__media {
+    min-height: auto;
+  }
+
+  .hero__image {
+    min-height: 320px;
+  }
+
+  .hero__card {
+    position: static;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .cards-grid,
+  .lane-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lane-card__meta {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 540px) {
+  .button {
+    width: 100%;
+  }
+
+  .hero__actions,
+  .cta-block__actions {
+    flex-direction: column;
+  }
+
+  .hero__actions .button,
+  .cta-block__actions .button {
+    width: 100%;
+  }
+
+  .lane-tools {
+    padding: 1rem;
+  }
+
+  .form-panel,
+  .info-panel,
+  .intro-panel,
+  .feature-panel {
+    padding: 1.1rem;
+  }
+}
+
+/* ── Carrier page responsive ──────────────────────────────────────── */
+
+@media (max-width: 1100px) {
+  .carrier-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .carrier-sidebar {
+    position: static;
+  }
+
+  .carrier-sidebar__facts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .carrier-form-card__body {
+    padding: 1.4rem 1.1rem;
+  }
+
+  .carrier-form-footer {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .carrier-submit-btn {
+    width: 100%;
+  }
+
+  .carrier-sidebar__facts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .carrier-sidebar__facts {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .carrier-hero__pills {
+    gap: 0.5rem;
+  }
+}

@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | Active Carriers Corporation</title>
+  <meta name="description" content="Contact Active Carriers Corporation for freight quotes, carrier support, and transportation questions.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0B1728">
+  <link rel="canonical" href="contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact Us | Active Carriers Corporation">
+  <meta property="og:description" content="Contact Active Carriers Corporation for freight quotes, carrier support, and transportation questions.">
+  <meta property="og:url" content="contact.html">
+  <meta property="og:image" content="assets/logo/logo.svg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Contact Us | Active Carriers Corporation">
+  <meta name="twitter:description" content="Contact Active Carriers Corporation for freight quotes, carrier support, and transportation questions.">
+  <link rel="icon" type="image/svg+xml" href="assets/logo/logo.svg">
+  <link rel="apple-touch-icon" href="assets/logo/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="contact">
+  <a class="sr-only" href="#main-content">Skip to content</a>
+  <div data-site-header></div>
+
+  <main id="main-content">
+
+    <!-- ── HERO ──────────────────────────────────────────────────────── -->
+    <section class="page-hero contact-hero">
+      <div class="container page-hero__inner">
+        <div data-reveal>
+          <span class="hero__eyebrow">Get in touch</span>
+          <h1 class="page-hero__title">Contact Us</h1>
+          <p class="page-hero__subtitle">
+            Have a shipment that needs moving? Reach out to our dispatch team for a free quote or carrier onboarding support.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--accent" href="carrier.html">Register as Carrier</a>
+            <a class="button button--secondary" href="book-lane.html">Get a Quote</a>
+          </div>
+        </div>
+        <div class="page-hero__panel" data-reveal>
+          <img src="assets/images/image5.jpeg" alt="Commercial trucks staged in a logistics yard" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ── QUICK STAT BAR ─────────────────────────────────────────────── -->
+    <div class="contact-stat-bar" data-reveal data-contact-stat-bar>
+      <!-- populated by script -->
+    </div>
+
+    <!-- ── MAIN DETAIL ROW ────────────────────────────────────────────── -->
+    <section class="section contact-section">
+      <div class="container">
+        <div class="contact-detail-row">
+
+          <!-- Card 1: Contact info -->
+          <div class="contact-detail-card" data-reveal data-contact-info-card>
+            <!-- populated by script -->
+          </div>
+
+          <!-- Card 2: Authority & Registration -->
+          <div class="contact-detail-card contact-detail-card--authority" data-reveal data-contact-auth-card>
+            <!-- populated by script -->
+          </div>
+
+          <!-- Card 3: Location / map -->
+          <div class="contact-detail-card contact-detail-card--location" data-reveal data-contact-location-card>
+            <!-- populated by script -->
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ROW ────────────────────────────────────────────────────── -->
+    <section class="section section--muted contact-cta-section">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__eyebrow">How can we help</span>
+          <h2 class="section__title">Choose the right next step</h2>
+        </div>
+        <div class="contact-cta-row">
+          <article class="contact-cta-card" data-reveal>
+            <div class="contact-cta-card__icon">01</div>
+            <h3>Get a Freight Quote</h3>
+            <p>Browse our live lane board and submit a booking request. Our dispatch team will follow up with availability and rates.</p>
+            <a class="button button--accent" href="book-lane.html">Book a Lane</a>
+          </article>
+          <article class="contact-cta-card" data-reveal>
+            <div class="contact-cta-card__icon">02</div>
+            <h3>Carrier Onboarding</h3>
+            <p>Register as a carrier and our team will reach out to collect your documents and get you set up on the network.</p>
+            <a class="button button--accent" href="carrier.html">Register Now</a>
+          </article>
+          <article class="contact-cta-card contact-cta-card--call" data-reveal data-contact-cta-call>
+            <!-- phone CTA populated by script -->
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    (function () {
+      document.addEventListener("DOMContentLoaded", function () {
+        var c = (window.PAK_TRANSPORTATION && window.PAK_TRANSPORTATION.company) || {};
+        var tel = (c.phone || "").replace(/[^+\d]/g, "");
+        var statusClass = "status-badge status-badge--" + (c.usdotStatus || "").toLowerCase();
+
+        // ── Stat bar ──────────────────────────────────────────────────
+        var statBar = document.querySelector("[data-contact-stat-bar]");
+        if (statBar) {
+          statBar.innerHTML =
+            '<div class="container">' +
+              '<div class="contact-stat-bar__inner">' +
+                '<div class="contact-stat">' +
+                  '<span>USDOT</span><strong>' + (c.usdot || "—") + '</strong>' +
+                '</div>' +
+                '<div class="contact-stat-divider"></div>' +
+                '<div class="contact-stat">' +
+                  '<span>MC / FF</span><strong>' + (c.mc || "—") + '</strong>' +
+                '</div>' +
+                '<div class="contact-stat-divider"></div>' +
+                '<div class="contact-stat">' +
+                  '<span>Status</span>' +
+                  '<strong><span class="' + statusClass + '">' + (c.usdotStatus || "—") + '</span></strong>' +
+                '</div>' +
+                '<div class="contact-stat-divider"></div>' +
+                '<div class="contact-stat">' +
+                  '<span>Phone</span>' +
+                  '<strong><a href="tel:' + tel + '">' + (c.phone || "—") + '</a></strong>' +
+                '</div>' +
+                // '<div class="contact-stat-divider"></div>' +
+                // '<div class="contact-stat">' +
+                //   '<span>Hours</span><strong>' + (c.hours || "—") + '</strong>' +
+                // '</div>' +
+              '</div>' +
+            '</div>';
+        }
+
+        // ── Contact info card ─────────────────────────────────────────
+        var infoCard = document.querySelector("[data-contact-info-card]");
+        if (infoCard) {
+          infoCard.innerHTML =
+            '<div class="contact-detail-card__header">' +
+              '<span class="contact-detail-card__eyebrow">Contact</span>' +
+              '<h2 class="contact-detail-card__title">Reach our team</h2>' +
+            '</div>' +
+            '<ul class="contact-detail-list">' +
+              '<li>' +
+                '<span class="contact-detail-list__label">Business</span>' +
+                '<strong class="contact-detail-list__value" title="' + (c.name || "") + '">' + (c.name || "—") + '</strong>' +
+              '</li>' +
+              '<li>' +
+                '<span class="contact-detail-list__label">Phone</span>' +
+                '<strong class="contact-detail-list__value"><a href="tel:' + tel + '">' + (c.phone || "—") + '</a></strong>' +
+              '</li>' +
+              '<li>' +
+                '<span class="contact-detail-list__label">Email</span>' +
+                '<strong class="contact-detail-list__value" title="' + (c.email || "") + '"><a href="mailto:' + (c.email || "") + '">' + (c.email || "—") + '</a></strong>' +
+              '</li>' +
+            '</ul>' +
+            '<div class="contact-detail-card__cta">' +
+              '<a class="button button--accent" href="tel:' + tel + '">Call Now</a>' +
+            '</div>';
+        }
+
+        // ── Authority card ────────────────────────────────────────────
+        var authCard = document.querySelector("[data-contact-auth-card]");
+        if (authCard) {
+          authCard.innerHTML =
+            '<div class="contact-detail-card__header">' +
+              '<span class="contact-detail-card__eyebrow">Authority</span>' +
+              '<h2 class="contact-detail-card__title">Registration</h2>' +
+            '</div>' +
+            '<ul class="contact-auth-list">' +
+              '<li>' +
+                '<span>USDOT Number</span>' +
+                '<strong>' + (c.usdot || "—") + '</strong>' +
+              '</li>' +
+              '<li>' +
+                '<span>USDOT Status</span>' +
+                '<strong><span class="' + statusClass + '">' + (c.usdotStatus || "—") + '</span></strong>' +
+              '</li>' +
+              '<li>' +
+                '<span>MX / FF Number</span>' +
+                '<strong>' + (c.mc || "—") + '</strong>' +
+              '</li>' +
+            '</ul>' +
+            '<div class="contact-detail-card__cta">' +
+              '<a class="button button--accent" href="carrier.html">Register Now</a>' +
+            '</div>';
+        }
+
+        // ── Location card ─────────────────────────────────────────────
+        var locCard = document.querySelector("[data-contact-location-card]");
+        if (locCard) {
+          var fullAddress = (c.address || "") + ', ' + (c.city || "") + ', ' + (c.state || "") + ' ' + (c.zip || "");
+          locCard.innerHTML =
+            '<div class="contact-detail-card__header">' +
+              '<span class="contact-detail-card__eyebrow">Location</span>' +
+              '<h2 class="contact-detail-card__title">Find us</h2>' +
+            '</div>' +
+            '<div class="contact-location-block">' +
+              '<div class="contact-location-pin">' +
+                '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>' +
+              '</div>' +
+              '<address class="contact-location-address">' +
+                (c.address || "") + '<br>' +
+                (c.city || "") + ', ' + (c.state || "") + ' ' + (c.zip || "") +
+              '</address>' +
+            '</div>' +
+            '<div class="contact-detail-card__cta">' +
+              '<a class="button button--accent" href="carrier.html#registration-form">Register Now</a>' +
+            '</div>';
+        }
+
+        // ── Call CTA card ─────────────────────────────────────────────
+        var ctaCall = document.querySelector("[data-contact-cta-call]");
+        if (ctaCall) {
+          ctaCall.innerHTML =
+            '<div class="contact-cta-card__icon">03</div>' +
+            '<h3>Call Dispatch</h3>' +
+            '<p>Speak directly with our team during business hours for the fastest answer on freight availability and rates.</p>' +
+            '<a class="button button--accent" href="tel:' + tel + '">' + (c.phone || "Call Us") + '</a>';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

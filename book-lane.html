@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Your Lane | Active Carriers Corporation</title>
+  <meta name="description" content="Submit a lane request and our team will contact you with the next steps for booking.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0B1728">
+  <link rel="canonical" href="book-lane.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Book Your Lane | Active Carriers Corporation">
+  <meta property="og:description" content="Submit a lane request and our team will contact you with the next steps for booking.">
+  <meta property="og:url" content="book-lane.html">
+  <meta property="og:image" content="assets/logo/logo.svg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Book Your Lane | Active Carriers Corporation">
+  <meta name="twitter:description" content="Submit a lane request and our team will contact you with the next steps for booking.">
+  <link rel="icon" type="image/svg+xml" href="assets/logo/logo.svg">
+  <link rel="apple-touch-icon" href="assets/logo/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="booking">
+  <a class="sr-only" href="#main-content">Skip to content</a>
+  <div data-site-header></div>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <div data-reveal>
+          <span class="hero__eyebrow">Quote Request</span>
+          <h1 class="page-hero__title">Book Your Lane</h1>
+          <p class="page-hero__subtitle">
+            Submit your information and our team will contact you with the next steps.
+          </p>
+        </div>
+        <div class="page-hero__panel" data-reveal>
+          <img src="assets/images/image1.jpeg" alt="Truck on the road moving freight between cities" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="booking-form">
+      <div class="container two-column">
+        <div class="info-panel" data-reveal>
+          <span class="section__eyebrow">Selected lane</span>
+          <h2 class="section__title" data-selected-lane>Enter a lane number</h2>
+          <p class="section__lead" data-selected-route>
+            Use the field below to manually enter or edit the lane number.
+          </p>
+
+          <!-- shown when a valid lane is matched -->
+          <div class="lane-detail-block" data-lane-details hidden>
+            <div class="lane-detail-grid">
+              <div class="lane-detail-item">
+                <span>Rate</span>
+                <strong data-detail-rate>—</strong>
+              </div>
+              <div class="lane-detail-item">
+                <span>Miles</span>
+                <strong data-detail-miles>—</strong>
+              </div>
+              <div class="lane-detail-item">
+                <span>Pickup</span>
+                <strong data-detail-pickup>—</strong>
+              </div>
+              <div class="lane-detail-item">
+                <span>Delivery</span>
+                <strong data-detail-delivery>—</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- shown when the typed lane number doesn't match any lane -->
+          <p class="lane-not-found" data-lane-not-found hidden>
+            Lane not found. Check the number or browse <a href="lanes.html">available lanes</a>.
+          </p>
+
+          <div class="trust-bar" style="margin-top: 1.2rem;">
+            <span class="trust-pill">Fast response</span>
+            <span class="trust-pill">Transparent follow-up</span>
+            <span class="trust-pill">Dedicated dispatch support</span>
+          </div>
+          <!-- <img class="feature-image" src="assets/images/image4.jpeg" alt="Transportation dispatch office with workstations and monitors" loading="lazy" style="margin-top: 1.2rem;"> -->
+        </div>
+
+        <div class="form-panel" data-reveal>
+          <form data-booking-form novalidate>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="booking-first-name">First Name</label>
+                <input id="booking-first-name" name="first_name" type="text" autocomplete="given-name" required>
+              </div>
+              <div class="form-field">
+                <label for="booking-last-name">Last Name</label>
+                <input id="booking-last-name" name="last_name" type="text" autocomplete="family-name" required>
+              </div>
+              <div class="form-field">
+                <label for="booking-email">Email *</label>
+                <input id="booking-email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div class="form-field">
+                <label for="booking-phone">Phone Number</label>
+                <input id="booking-phone" name="phone" type="tel" autocomplete="tel" required>
+              </div>
+              <div class="form-field form-field--full">
+                <label for="booking-lane">Lane Number *</label>
+                <input id="booking-lane" data-lane-input name="lane_number" type="text" list="laneNumbers" placeholder="LN-1001" required>
+                <datalist id="laneNumbers" data-lane-datalist></datalist>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="button button--accent" type="submit">Book This Lane</button>
+            </div>
+            <div class="form-message" data-form-message aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/emailjs.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

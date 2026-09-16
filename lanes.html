@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Available Lanes | Active Carriers Corporation</title>
+  <meta name="description" content="Browse available freight lanes, filter by state or date, and book the lane that fits your operation.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0B1728">
+  <link rel="canonical" href="lanes.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Available Lanes | Active Carriers Corporation">
+  <meta property="og:description" content="Browse available freight lanes, filter by state or date, and book the lane that fits your operation.">
+  <meta property="og:url" content="lanes.html">
+  <meta property="og:image" content="assets/logo/logo.svg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Available Lanes | Active Carriers Corporation">
+  <meta name="twitter:description" content="Browse available freight lanes and book the lane that fits your operation.">
+  <link rel="icon" type="image/svg+xml" href="assets/logo/logo.svg">
+  <link rel="apple-touch-icon" href="assets/logo/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="lanes">
+  <a class="sr-only" href="#main-content">Skip to content</a>
+  <div data-site-header></div>
+
+  <main id="main-content" data-lane-page>
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <div data-reveal>
+          <span class="hero__eyebrow">Available Freight</span>
+          <h1 class="page-hero__title">Available Lanes</h1>
+          <p class="page-hero__subtitle">
+            Search freight by lane number, route, state, pickup date, rate, or mileage. Book the lane directly when you find a fit.
+          </p>
+          <div class="lane-summary" data-lane-summary></div>
+        </div>
+        <div class="page-hero__panel" data-reveal>
+          <img src="assets/images/image1.jpeg" alt="Freight truck moving through an open highway corridor" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__header lane-section__header" data-reveal>
+          <span class="section__eyebrow">Lane directory</span>
+          <h2 class="section__title">Search live freight lanes</h2>
+          <p class="section__lead">Filter by city, state, pickup date, rate, or mileage to quickly find the right freight opportunity.</p>
+        </div>
+
+        <div class="lane-tools" data-reveal>
+          <div class="lane-tools__grid">
+            <div class="field">
+              <label for="lane-search">Search</label>
+              <input id="lane-search" data-search-filter type="search" placeholder="Lane number, city, or state">
+            </div>
+            <div class="field">
+              <label for="lane-state">State</label>
+              <select id="lane-state" data-state-filter></select>
+            </div>
+            <div class="field">
+              <label for="lane-date">Pickup Date</label>
+              <input id="lane-date" data-date-filter type="date">
+            </div>
+            <div class="field">
+              <label for="lane-type">Type</label>
+              <select id="lane-type" data-type-filter>
+                <option value="all">All Types</option>
+                <option value="one-way">One Way</option>
+                <option value="round-trip">Round Trip</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="lane-sort">Rate Sort</label>
+              <select id="lane-sort" data-sort-filter>
+                <option value="featured">Featured</option>
+                <option value="rate-asc">Rate: Low to High</option>
+                <option value="rate-desc">Rate: High to Low</option>
+                <option value="miles-asc">Miles: Low to High</option>
+                <option value="miles-desc">Miles: High to Low</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="lane-reset">Reset</label>
+              <button id="lane-reset" class="button button--secondary" type="button" data-reset-filters>Clear Filters</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="lane-section__summary" data-reveal>
+          <p class="lane-section__summary-text" data-lane-section-summary aria-live="polite">Use the filters above to narrow the load board.</p>
+        </div>
+
+        <div class="lane-grid" data-lane-grid></div>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/lanes.js"></script>
+</body>
+</html>

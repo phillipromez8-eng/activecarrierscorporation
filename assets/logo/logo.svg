@@ -1,0 +1,7 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Active Carriers Corporation logo">
+  <rect x="3" y="3" width="58" height="58" rx="18" fill="#0B1728"/>
+  <path d="M16 36.5C19.6 31.2 24.6 28.6 31 28.6C37.4 28.6 42.4 31.2 46 36.5" stroke="#F47A20" stroke-width="4.2" stroke-linecap="round"/>
+  <path d="M18 24H46" stroke="#D8E3F1" stroke-width="4.2" stroke-linecap="round"/>
+  <path d="M18 44H38.5" stroke="#D8E3F1" stroke-width="4.2" stroke-linecap="round"/>
+  <circle cx="45.5" cy="44" r="4" fill="#F47A20"/>
+</svg>
